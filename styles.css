@@ -5,23 +5,34 @@
     font-style: normal;
 };
 
-body {
-    width:100%;
-    margin: 0;
-    padding: 0;
+/* Center images; must appear first or fonts don't render? */
+.centered-image {
     display: block;
-    font-family: "CrimsonPro", Georgia, serif;
-}
-
-.center {
-    display: block;
-    margin: 0 auto; /* Centers block-level elements, like images */
+    margin: 0 auto; /* Centers block-level elements, e.g. images */
     max-width: 100%;
     height: auto;
-    text-align: center;
+}
+
+/* Basic body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Crimson Pro", Georgia, serif;
+    text-align: center; /* Centers inline elements, e.g. text and images */
+    background-color: #c6c6c6;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Center vertically */
-} 
+    min-height: 100vh; /* Makes sure content is vertically centered */
+}
 
+/* Container to hold page content */
+.content-container {
+    text-align: center; /* Centers all text within the container */
+}
+
+.clip {
+    border-radius: 15px; /* Round image corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), /* Outer shadow */
+                0 6px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for extra depth */
+}
